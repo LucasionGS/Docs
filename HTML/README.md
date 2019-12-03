@@ -1,5 +1,4 @@
-# HTML Documentation
-
+# HTML General
 ## **\<!-- Comment -->**
 ```html
 <!-- This is a comment -->
@@ -7,8 +6,58 @@
 You'll see this tag quite a lot in this documentation, as it's used inside of the code.
 writing ``<!-- text here -->`` is writing a comment in HTML, and will not be displayed in the document.  
 Comments are used like placeholder texts just for the developer, small foot notes, inline documentation, etc...
-The differnece between a normal tag and a comment tag when writing it, is that the normal tags are just ``<>`` with text inside like ``<body>``, but the comment has ``<!--`` on the start and ``-->`` on the end
+The differnece between a normal tag and a comment tag when writing it, is that the normal tags are just ``<>`` with text inside like ``<body>``, but the comment has ``<!--`` on the start and ``-->`` on the end.
 
+## **Tag Attributes**
+``Attributes`` are settings within an HTML tag. There are a lot of ``attributes`` and some of them can only be used for somem specific tags, while others can be used for every.
+
+Attributes are written like so: (This example is with a ``div``, but could be any)
+```html
+<!-- This sets attribute "class" to "container" -->
+<div class="container"></div>
+
+<!-- Or it can be a toggle attribute, in which case you can write it without ="x" -->
+
+<!-- This sets "hidden" to "true" and hides the element -->
+<div hidden></div>
+
+<!-- Elements can also combine attributes and have multiple -->
+<div hidden class="container" id="mySpecialDiv"></div>
+```
+Some common ones are:
+- ``id``
+  ```html
+  ID can be a document unique name for an element, used to reference a specific element in CSS and JavaScript. Only 1 element should have a specific ID.
+  Avoid spaces in ID name.
+  <div id="identifier"></div>
+  ```
+- ``class``
+  ```html
+  Class can be a name for an element's "type" or purpose, used to reference a specific group of elements in CSS and JavaScript.
+  <div class="classname"></div>
+  
+  An object can have multiple class names. Just simply add a space and then write another name.
+  <div class="classname1 classname2"></div>
+  ```
+- ``style``
+  ```html
+  The style attribute can include CSS code which will only apply to this element.
+  <div style="background-color: #FF0000; width: 128px; height: 64px;"></div>
+  ```
+- ``title``
+  ```html
+  The title attribute adds a tooltip hovering text when you put your mouse over the object. This means that if I make a div with the attribute title set to "This is a div", it will display when you hover your mouse over it.
+
+  <div title="This is a div">Hover over me!</div>
+
+  Try to hover over the block below to see what it would look like.
+  ```
+
+  <div title="This is a div">Hover over me!</div>
+
+
+
+# HTML Tags
 ## **\<html> tag**
 ```html
 <html>
@@ -16,6 +65,19 @@ The differnece between a normal tag and a comment tag when writing it, is that t
 </html>
 ```
 The ``html`` tag is the main tag of your HTML document. It should be used as the very first tag of your document. The starting tag should be the first tag in your code and the ending tag should be the last in your code.
+
+## **\<head> tag**
+```html
+<head>
+  <!-- Meta tags, title, references, etc.. -->
+</head>
+```
+The ``head`` tag shouldn't include any graphical tags, but should include things like ``meta`` tags and source links. For instance, if you use a CSS file for your website instead of a ``style`` tag or attribute, you can link it by make a ``link`` tag like so:
+```html
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+```
 
 ## **\<body> tag**
 ```html
@@ -70,3 +132,8 @@ Example of use:
 </html>
 ```
 ![example](https://lucasion.xyz/f/22.15.13-02.12.19.png)
+
+## **\<img> tag**
+```html
+<img src="./image.png" alt="Image">
+```
