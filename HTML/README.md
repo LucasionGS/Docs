@@ -150,3 +150,7 @@ Unlike a lot of tags, the img tag doesn't need an ending tag, as it doesn't need
 The example above would show this:
 
 <img src="https://lucasion.xyz/home/img/github.png" alt="Image">
+
+
+# Relevant Docs
+[CSS](../CSS/README.md) (Used in ``style`` tag and attribute, and in linked stylesheets)
