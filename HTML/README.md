@@ -24,16 +24,18 @@ Attributes are written like so: (This example is with a ``div``, but could be an
 <!-- Elements can also combine attributes and have multiple -->
 <div hidden class="container" id="mySpecialDiv"></div>
 ```
-Some common ones are:
+Some common global attributes:
 - ``id``
   ```html
-  ID can be a document unique name for an element, used to reference a specific element in CSS and JavaScript. Only 1 element should have a specific ID.
+  ID can be a document unique name for an element, used to reference a specific element in CSS and JavaScript.
+  Only 1 element should have a specific ID.
   Avoid spaces in ID name.
   <div id="identifier"></div>
   ```
 - ``class``
   ```html
-  Class can be a name for an element's "type" or purpose, used to reference a specific group of elements in CSS and JavaScript.
+  Class can be a name for an element's "type" or purpose,
+  used to reference a specific group of elements in CSS and JavaScript.
   <div class="classname"></div>
   
   An object can have multiple class names. Just simply add a space and then write another name.
@@ -44,14 +46,16 @@ Some common ones are:
   The style attribute can include CSS code which will only apply to this element.
   <div style="background-color: #FF0000; width: 128px; height: 64px;"></div>
   ```
+  The example would look like this
+  <div style="background-color: #FF0000; width: 128px; height: 64px;"></div>
+
 - ``title``
   ```html
   The title attribute adds a tooltip hovering text when you put your mouse over the object. This means that if I make a div with the attribute title set to "This is a div", it will display when you hover your mouse over it.
 
   <div title="This is a div">Hover over me!</div>
-
-  Try to hover over the block below to see what it would look like.
   ```
+  Try to hover over the block below to see what it would look like.
 
   <div title="This is a div">Hover over me!</div>
 
@@ -75,7 +79,11 @@ The ``html`` tag is the main tag of your HTML document. It should be used as the
 The ``head`` tag shouldn't include any graphical tags, but should include things like ``meta`` tags and source links. For instance, if you use a CSS file for your website instead of a ``style`` tag or attribute, you can link it by make a ``link`` tag like so:
 ```html
 <head>
+  <!-- Link tag with rel="stylesheet" refers to a css file -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- script with the src attribute pointed at a JavaScript file -->
+  <script src="script.js"></script>
 </head>
 ```
 
@@ -95,7 +103,7 @@ The ``body`` tag is where your main content of your page is. Practically everyth
 ```
 The ``div`` tag is mainly used for containing other tags. Think of a div as ``body`` within the ``body``, and can be used to make sections of content.
 
-Example of use: (the ``style`` attribute will be explained later)
+Example of use: (the ``style`` attribute is explained above)
 ```html
 <html>
   <body style="margin: 0; padding: 0;">
@@ -135,5 +143,10 @@ Example of use:
 
 ## **\<img> tag**
 ```html
-<img src="./image.png" alt="Image">
+<img src="https://lucasion.xyz/home/img/github.png" alt="Image">
 ```
+The ``img`` tag will display an image if the ``src`` is set to a valid image. The ``src`` attribute refers to what **s**ou**rc**e the ``img`` element should use.
+Unlike a lot of tags, the img tag doesn't need an ending tag, as it doesn't need to contain anything inside of itself.  
+The example above would show this:
+
+<img src="https://lucasion.xyz/home/img/github.png" alt="Image">
