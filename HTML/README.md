@@ -9,7 +9,7 @@ Comments are used like placeholder texts just for the developer, small foot note
 The differnece between a normal tag and a comment tag when writing it, is that the normal tags are just ``<>`` with text inside like ``<body>``, but the comment has ``<!--`` on the start and ``-->`` on the end.
 
 ## **Tag Attributes**
-``Attributes`` are settings within an HTML tag. There are a lot of ``attributes`` and some of them can only be used for somem specific tags, while others can be used for every.
+``Attributes`` are settings within an HTML tag. There are a lot of ``attributes`` and some of them can only be used for specific tags, while others can be used for every.
 
 Attributes are written like so: (This example is with a ``div``, but could be any)
 ```html
